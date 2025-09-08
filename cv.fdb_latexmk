@@ -1,7 +1,7 @@
 # Fdb version 4
-["pdflatex"] 1757325863.15951 "/home/kiran/VSCodeProjects/CV/cv.tex" "cv.pdf" "cv" 1757325863.5964 0
+["pdflatex"] 1757332827.79629 "/home/kiran/VSCodeProjects/CV/cv.tex" "cv.pdf" "cv" 1757332828.22222 0
   "/etc/texmf/web2c/texmf.cnf" 1757173916.43756 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/home/kiran/VSCodeProjects/CV/cv.tex" 1757325862.82294 4228 d210f824e31ea356fff3a86a8766189b ""
+  "/home/kiran/VSCodeProjects/CV/cv.tex" 1757332827.2364 4226 335c3fc6eae21d8e1aa46f59e37eb3a9 ""
   "/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/share/texlive/texmf-dist/fonts/enc/dvips/fontawesome5/fa5brands0.enc" 1622837620 2920 d63721872b8c77041b88e51b8f7c291d ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -72,9 +72,9 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1741904018 41538 c016915c1d51223b6dbbfe27341748a8 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1757173961 5467255 9a64d1b40e0b893fc5588ecce9d8accf ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1757174033 3347755 bafd0ce94c2f12c174f7c8125443bf4e ""
-  "cv.aux" 1757325863.55575 694 e14cb74a4ac79830001e95f5b535c7ee "pdflatex"
-  "cv.out" 1757325863.55675 450 5127375dc68e71750d97f34c35882210 "pdflatex"
-  "cv.tex" 1757325862.82294 4228 d210f824e31ea356fff3a86a8766189b ""
+  "cv.aux" 1757332828.18503 694 e14cb74a4ac79830001e95f5b535c7ee "pdflatex"
+  "cv.out" 1757332828.18503 450 5127375dc68e71750d97f34c35882210 "pdflatex"
+  "cv.tex" 1757332827.2364 4226 335c3fc6eae21d8e1aa46f59e37eb3a9 ""
   (generated)
   "cv.aux"
   "cv.log"
