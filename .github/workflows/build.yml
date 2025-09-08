@@ -24,11 +24,11 @@ jobs:
       # Convert LaTeX to HTML
       - name: Convert LaTeX to HTML
         run: |
-          pandoc cv.tex -s -o cv.html --from latex --to html5 --metadata title="Kiran De Roy CV"
+          pandoc -s cv.tex -o cv.html
 
       # Deploy to GitHub Pages
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.GH_PAT }}
           publish_dir: ./
