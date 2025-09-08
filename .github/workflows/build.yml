@@ -24,7 +24,8 @@ jobs:
       # Convert LaTeX to HTML
       - name: Convert LaTeX to HTML
         run: |
-          pandoc -s cv.tex -o build/index.html
+          mkdir -p build
+          pandoc -s cv.tex -o build/index.html --metadata title="Kiran De Roy CV"
 
       # Deploy to GitHub Pages
       - name: Deploy to GitHub Pages
