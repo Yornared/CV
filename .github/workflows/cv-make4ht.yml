@@ -17,6 +17,7 @@ jobs:
         packages: |
           tex4ht
           make4ht
+          luatex
           fontawesome5
           charter
           geometry
