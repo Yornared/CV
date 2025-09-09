@@ -1,4 +1,5 @@
 name: Convert CV with make4ht
+
 on:
   # Only trigger manually to avoid conflicts
   workflow_dispatch:
@@ -6,23 +7,35 @@ on:
 jobs:
   convert:
     runs-on: ubuntu-latest
+    
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
     
     - name: Setup TeX Live
-      uses: teatimeguest/setup-texlive-action@v2
+      uses: zauguin/install-texlive@v2
       with:
         packages: |
           tex4ht
           make4ht
           fontawesome5
-          # ... other packages
+          charter
+          geometry
+          hyperref
+          enumitem
+          parskip
+          titlesec
     
     - name: Convert with make4ht
-      run: make4ht -u cv.tex "html5,charset=utf-8"
+      run: |
+        mkdir -p build
+        make4ht -u cv.tex "html5,charset=utf-8" -d build/
+        # Copy CSS if it exists
+        if [ -f "style.css" ]; then
+          cp style.css build/
+        fi
     
     - name: Deploy to GitHub Pages
-      uses: peaceiris/actions-gh-pages@v3
+      uses: peaceiris/actions-gh-pages@v4
       with:
         github_token: ${{ secrets.GH_PAT }}
         publish_dir: ./build
