@@ -18,6 +18,7 @@ jobs:
           tex4ht
           make4ht
           luatex
+          luaxml
           fontawesome5
           charter
           geometry
