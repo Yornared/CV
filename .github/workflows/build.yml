@@ -3,8 +3,6 @@ name: Build CV
 on:
   push:
     branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
   workflow_dispatch:
 
 jobs:
@@ -12,29 +10,29 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # Checkout the repository
       - uses: actions/checkout@v4
 
-      # Install dependencies (Pandoc + LaTeX)
       - name: Install dependencies
         run: |
           sudo apt-get update
-          sudo apt-get install -y pandoc texlive-latex-base texlive-fonts-recommended texlive-fonts-extra texlive-latex-extra
+          sudo apt-get install -y pandoc \ 
+                                  texlive-latex-base \ 
+                                  texlive-fonts-recommended \ 
+                                  texlive-fonts-extra \ 
+                                  texlive-latex-extra
 
-      # Convert LaTeX to HTML
-      - name: Convert LaTeX to HTML
+      - name: Build CV HTML
         run: |
           mkdir -p build
           cp style.css build/
-          pandoc -s cv.tex -o build/index.html --metadata title="Kiran De Roy CV" --css=style.css
+
+          pandoc -s cv.tex -o build/cv.html --metadata title="Kiran De Roy CV" --css=style.css
+
           cp template.html build/
           cp projects.html build/
 
-          sed '/{{content}}/{ r build/index.html d}' build/template.html > build/index.html
-          sed '/{{content}}/{ r projects.html d}' build/template.html > build/projects.html
+          sed '/{{content}}/{ r build/cv.html d}' build/template.html > build/index.html
 
-
-      # Deploy to GitHub Pages
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
