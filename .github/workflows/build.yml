@@ -42,7 +42,6 @@ jobs:
 
           sed '/{{content}}/{
             r build/projects.html
-            d
           }' build/template.html > build/projects.html
 
 
