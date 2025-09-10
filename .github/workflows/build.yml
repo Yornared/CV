@@ -27,6 +27,12 @@ jobs:
           mkdir -p build
           cp style.css build/
           pandoc -s cv.tex -o build/index.html --metadata title="Kiran De Roy CV" --css=style.css
+          cp template.html build/
+          cp projects.html build/
+
+          sed '/{{content}}/{ r build/index.html d}' build/template.html > build/index.html
+          sed '/{{content}}/{ r projects.html d}' build/template.html > build/projects.html
+
 
       # Deploy to GitHub Pages
       - name: Deploy to GitHub Pages

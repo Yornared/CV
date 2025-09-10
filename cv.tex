@@ -14,10 +14,10 @@
 \titlespacing{\section}{0pt}{0.1cm}{0.1cm}
 
 \ifdefined\HCode
-  % --- Pandoc/HTML mode ---
+  %HTML mode ---
   \newenvironment{highlights}{\begin{itemize}}{\end{itemize}}
 \else
-  % --- LaTeX/PDF mode ---
+  %LaTeX/PDF mode ---
   \usepackage{enumitem}
   \newlist{highlights}{itemize}{1}
   \setlist[highlights]{label=\textbullet, left=0pt, itemsep=0.05cm, topsep=0.05cm}

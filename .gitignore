@@ -20,3 +20,6 @@
 *.idv
 *.lg
 *.xref
+
+!template.html
+!projects.html
