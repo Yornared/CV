@@ -27,7 +27,10 @@ jobs:
           cp template.html build/
           cp projects.html build/
 
-          sed '/{{content}}/{ r build/cv.html d}' build/template.html > build/index.html
+          sed '/{{content}}/{ 
+          r build/cv.html 
+          d
+          }' build/template.html > build/index.html
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
