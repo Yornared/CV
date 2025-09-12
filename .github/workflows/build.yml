@@ -21,6 +21,7 @@ jobs:
         run: |
           mkdir -p build
           cp style.css build/
+          cp -r images build/
 
           pandoc -s cv.tex -o build/cv.html --metadata title="Kiran De Roy CV" --css=style.css
 
