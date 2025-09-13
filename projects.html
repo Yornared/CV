@@ -1,82 +1,132 @@
 <h1>Projects</h1>
 <section>
   <h2>Wizzard Chess: Automatic Chessboard</h2>
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/mBQQEwoC7Qw" frameborder="0"
+  <iframe width="560" height="315"
+    src="https://www.youtube.com/embed/mBQQEwoC7Qw" frameborder="0"
     allowfullscreen></iframe>
 
   <p>
-    This project is a fully automated chessboard that physically moves pieces using a CoreXY gantry system, stepper
-    motors, and an electromagnet. The board communicates wirelessly with an ESP32-S3 microcontroller, which interprets
+    This project is a fully automated chessboard that physically moves pieces
+    using a CoreXY gantry system, stepper
+    motors, and an electromagnet. The board communicates wirelessly with an
+    ESP32-S3 microcontroller, which interprets
     moves from the Lichess API and translates them into precise motor commands.
   </p>
 
   <ul>
-    <li><strong>Design:</strong> Built on a cost-effective CoreXY rail system, inspired by 3D printer mechanics for
+    <li><strong>Design:</strong> Built on a cost-effective CoreXY rail system,
+      inspired by 3D printer mechanics for
       accuracy and simplicity.
     </li>
 
-    <li><strong>Electronics:</strong> Powered by stepper motor drivers, an electromagnet for moving pieces, and a
+    <li><strong>Electronics:</strong> Powered by stepper motor drivers, an
+      electromagnet for moving pieces, and a
       custom-built chess clock with wireless communication via nRF24.
     </li>
 
-    <li><strong>Software:</strong> A React-based web app connects the board to Lichess, tracks the game state, and
-      generates movement scripts for the magnet. Special handling was implemented for knight jumps, castling, and
+    <li><strong>Software:</strong> A React-based web app connects the board to
+      Lichess, tracks the game state, and
+      generates movement scripts for the magnet. Special handling was
+      implemented for knight jumps, castling, and
       captures.
     </li>
   </ul>
 
   <p><strong>Features:</strong></p>
   <ul>
-    <li>Play against AI or human opponents on Lichess while the board mirrors the moves in real time.</li>
+    <li>Play against AI or human opponents on Lichess while the board mirrors
+      the moves in real time.</li>
     <li>Accurate calibration with corner sensors and automatic re-homing.</li>
     <li>Bluetooth connection for setup and control.</li>
   </ul>
 
-  <p><strong>My contributions:</strong> I programmed the motor control system on the ESP32-S3, implemented Bluetooth Low
-    Energy and webserver communication with the React app, and co-designed and assembled the CoreXY rail system and
+  <p><strong>My contributions:</strong> I programmed the motor control system on
+    the ESP32-S3, implemented Bluetooth Low
+    Energy and webserver communication with the React app, and co-designed and
+    assembled the CoreXY rail system and
     board hardware.</p>
 
 </section>
 <section>
   <h3>UniGigs: Gamified Freelancing SaaS for Universities</h3>
-  <img src="images/unigig_landingPage.png" alt="UniGigs landingPage" style="max-width: 100%; height: auto;">
+  <img src="images/unigig_landingPage.png" alt="UniGigs landingPage"
+    style="max-width: 100%; height: auto;">
 
   <p>
-    UniGigs is a <strong>Software-as-a-Service (SaaS)</strong> platform that enables freelancing
-    services within university communities. It integrates gamification elements such as token-based
-    transactions, login streak rewards, user levels, and leaderboards to drive engagement.
+    UniGigs is a <strong>Software-as-a-Service (SaaS)</strong> platform that
+    enables freelancing
+    services within university communities. It integrates gamification elements
+    such as token-based
+    transactions, login streak rewards, user levels, and leaderboards to drive
+    engagement.
   </p>
 
   <p>
     <strong>Design & Features:</strong><br>
-  <ul>
-    <li>Intuitive UI/UX designed with Figma, focusing on ease of use and engagement.</li>
-    <li>Dual-role system allowing users to act as both service providers and seekers.</li>
-    <li>Token-based currency system with real money conversion via Stripe integration.</li>
-    <li>Gamification features including login streaks, user levels, and leaderboards to enhance user retention.</li>
-    <li>Real-time chat functionality and notifications for seamless communication.</li>
-    <li>Comprehensive profile management and gig tracking for users.</li>
-  </ul>
+    <ul>
+      <li>Intuitive UI/UX designed with Figma, focusing on ease of use and
+        engagement.</li>
+      <li>Dual-role system allowing users to act as both service providers and
+        seekers.</li>
+      <li>Token-based currency system with real money conversion via Stripe
+        integration.</li>
+      <li>Gamification features including login streaks, user levels, and
+        leaderboards to enhance user retention.</li>
+      <li>Real-time chat functionality and notifications for seamless
+        communication.</li>
+      <li>Comprehensive profile management and gig tracking for users.</li>
+    </ul>
   </p>
 
   <p>
     <strong>Development Context:</strong><br>
     Built by a team of 5 members over 12 weeks. The platform uses a
-    <strong>React + TypeScript frontend</strong>, <strong>Firebase backend</strong>,
+    <strong>React + TypeScript frontend</strong>, <strong>Firebase
+      backend</strong>,
     and <strong>Stripe integration</strong> for payments.
   </p>
 
   <p>
     <strong>My Contributions:</strong><br>
-  <ul>
-    <li>Set up and managed the Firebase NoSQL database (initially planned with Dataconnect, but migrated due to beta
-      limitations).</li>
-    <li>Implemented the <em>My Posted Gigs</em> and <em>Schedule</em> tabs for managing gigs.</li>
-    <li>Designed and built the UniGigs landing page.</li>
-    <li>Performed design cleanup to ensure consistency across views.</li>
-    <li>Actively contributed to brainstorming features and shaping the overall design direction.</li>
-    <li>Collaborated on UI/UX design.</li>
+    <ul>
+      <li>Set up and managed the Firebase NoSQL database (initially planned with
+        Dataconnect, but migrated due to beta
+        limitations).</li>
+      <li>Implemented the <em>My Posted Gigs</em> and <em>Schedule</em> tabs for
+        managing gigs.</li>
+      <li>Designed and built the UniGigs landing page.</li>
+      <li>Performed design cleanup to ensure consistency across views.</li>
+      <li>Actively contributed to brainstorming features and shaping the overall
+        design direction.</li>
+      <li>Collaborated on UI/UX design.</li>
 
-  </ul>
+    </ul>
+
+    <div class="flow">
+      <h3>Chat Flow</h3>
+      <div class="flow-grid">
+        <figure>
+          <img src="images/unigig_chat_0.png" alt="Open chat">
+          <figcaption>1. Open a chat with another student</figcaption>
+        </figure>
+        <figure>
+          <img src="images/unigig_chat_1.png" alt="Send a message">
+          <figcaption>2. Send your first message</figcaption>
+        </figure>
+        <figure>
+          <img src="images/unigig_chat_2.png" alt="Message history">
+          <figcaption>3. Conversation history is saved</figcaption>
+        </figure>
+        <figure>
+          <img src="images/unigig_chat_3.png" alt="Message history">
+          <figcaption>4. Conversation history is saved</figcaption>
+        </figure>
+        <figure>
+          <img src="images/unigig_chat_4.png" alt="Message history">
+          <figcaption>5. Conversation history is saved</figcaption>
+        </figure>
+      </div>
+    </div>
+
   </p>
 </section>
